@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    --red-crayola: #ee4266ff;
+    --dark-cyan: #55868C;
+    --gunmetal: #232c33ff;
+    --moonstone: #74A3AA;
+    --lavender: #D8E1FF;
+    background-color: var(--gunmetal);
+    color: var(--dark-cyan);
+}
+
+/* UNIVERSAL CSS */
+
+nav {
+    margin-top: 6px;
+    border-top: 3px var(--lavender) solid;
+    border-bottom: 2px var(--lavender) solid;
+    margin-bottom: 16px;
+}
+
+nav ul {
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 13px 0px 10px 0px;
+    font-size: medium;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--moonstone);
+}
+
+.nav-item a:hover {
+    color: var(--red-crayola);
+}
+
+.current a {
+    color: var(--red-crayola) !important;
+}
+
+.nav-item {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px var(--lavender) solid;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 25px;
+    margin: 25px 0;
+    width: 35%;
+    align-items: center;
+    border-right: 2px var(--lavender) solid;
+    color: var(--moonstone);
+}
+
+#profile h2 {
+    font-size: 1.5 rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#profile h3 {
+    font-size: 0.8 rem;
+    font-weight: lighter;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#profile p a {
+    color: var(--red-crayola);
+    text-decoration: none;
+}
+
+#profile p a:hover {
+    text-decoration: underline;
+}
+
+#profile p {
+    margin: 1.5px;
+    font-size: small;
+}
+
+
+#content {
+    justify-content: center;
+    align-items: center;
+    margin-left:5%;
+    margin-right:5%;
+    padding: 10px;
+    width: 60%;
+}
+
+#content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 5px;
+    margin-top: auto;
+    margin-bottom: 5px;
+    border-top: 2px var(--lavender) solid;
+    font-size: small;
+}
+
+/* ABOUT CSS */
+.about-table {
+    width: auto;
+}
+
+/* SKILLS CSS */
+
+table {
+    width: 100%;
+}
+
+.skill-table tr {
+    display:flex;
+    flex-direction: column;
+    font-size: large;
+    font-weight: bold;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+/* EDUCATION & EXPERIENCE CSS */
+
+.qualifications-table .larger td {
+    font-size: large;
+    padding-top: 35px;
+    padding-right: 0;
+}
+
+.qualifications-table tr .secondary {
+    text-align: right;
+}
+
+.desc {
+    font-size: normal;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.desc a {
+    color: var(--red-crayola);
+    text-decoration: none;
+}
+
+.desc a:hover {
+    text-decoration: underline;
+}
+
+/* INTERESTS CSS */
+
+#content ul {
+    font-size: large;
+    list-style:circle;
+}
+
+#content ul li {
+    padding: 5px 0;
+    margin:0;
+}
+
+#content ol li {
+    padding: 2px 0;
+}
+
+/* RESPONSIVE CSS */
+@media only screen and (max-width: 800px) {
+    body {
+        height: auto;
+        justify-content: space-between;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #profile {
+        justify-content: center;
+        border-right: none;
+        padding: 0;
+        margin: 0;
+        color: var(--moonstone);
+        width: auto;
+        height: 50vh;
+        border-bottom: 2px var(--lavender) solid;
+    }
+
+    #profile .profile-img {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    #profile h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 2px;
+    }
+
+    #profile h3 {
+        font-size: 1rem;
+        font-weight: lighter;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+
+    #content {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #content h1 {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-height:900px) {
+
+    #profile .profile-img {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    section {
+        height: 80%;
+    }
+}

@@ -258,16 +258,3 @@ progress {
     }
 
 }
-
-@media only screen and (min-height:900px) {
-
-    #profile .profile-img {
-        width: 300px;
-        height: 300px;
-        margin-bottom: 10px;
-    }
-
-    section {
-        height: 80%;
-    }
-}
